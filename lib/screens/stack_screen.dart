@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom/widget/custom_app_bar.dart';
-
 class StackScreen extends StatelessWidget {
   const StackScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
