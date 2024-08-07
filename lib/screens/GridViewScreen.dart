@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom/screens/second_screen.dart';
 
 class GridViewScreen extends StatelessWidget {
   const GridViewScreen({super.key});
@@ -54,11 +55,22 @@ class GridViewScreen extends StatelessWidget {
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           crossAxisSpacing: 10,
-          mainAxisSpacing: 10
+          mainAxisSpacing: 10, 
+              childAspectRatio: 1/1.5,
         ), itemBuilder: (context,index){
-            return Container(
-              color: Colors.cyan,
-              child: Center(child: Text('\$ ${names[index]}',style: TextStyle(fontSize: 20,color: Colors.white),)),
+            return GestureDetector(
+              onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                  return SecondScreen();
+                }));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.cyan,
+                  borderRadius: BorderRadius.circular(15)
+                ),
+                child: Center(child: Text('\$ ${names[index]}',style: TextStyle(fontSize: 20,color: Colors.white),)),
+              ),
             );
             },
             ),

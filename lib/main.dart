@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom/screens/GridViewScreen.dart';
 import 'package:flutter_zoom/screens/list_view_builder.dart';
+import 'package:flutter_zoom/screens/stack_screen.dart';
 
 
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: GridViewScreen(),
+      home: StackScreen(),
     );
   }
 }
