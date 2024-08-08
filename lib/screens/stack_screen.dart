@@ -30,6 +30,10 @@ class StackScreen extends StatelessWidget {
                 height: 100,
                 width: 100,
                 decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('assets/images/i4.jpg')
+                  ),
                     color: Colors.amber,
                   shape: BoxShape.circle
                 ),
